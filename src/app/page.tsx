@@ -2,11 +2,13 @@ import { AmbientBackground } from "@/components/shared/ambient-background";
 import { ThemeToggle } from "@/components/shared/theme-toggle";
 import { FadeIn } from "@/components/motion/fade-in";
 import { MagneticButton } from "@/components/shared/magnetic-button";
-
+import { Navbar } from "@/components/layout/navbar";
+import { PhilosophySection } from "@/sections/philosophy-section";
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-[var(--background)] text-[var(--foreground)]">
       <AmbientBackground />
+      <Navbar />
 
       <section className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center">
         <FadeIn delay={0.1}>
@@ -36,6 +38,7 @@ export default function Home() {
           </div>
         </FadeIn>
       </section>
+      <PhilosophySection />
     </main>
   );
 }
